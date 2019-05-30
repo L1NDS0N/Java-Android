@@ -2,4 +2,5 @@
     <string name="app_name">Thermometer</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="grauscelsius">Graus Celsius</string>
+    <string name="conversor">Conversor</string>
 </resources>

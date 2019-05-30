@@ -20,32 +20,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gCelsius = (EditText)findViewById(R.id.etCelsius);
-        gFahren = (EditText)findViewById(R.id.etFahrenheit);
-
-        swConversor = (Switch)findViewById(R.id.swConversor);
-
-                if (gCelsius != null){
-        swConversor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Double gCel;
-                Boolean btnCon;
-                gCel = Double.parseDouble(gCelsius.getText().toString());
-                btnCon = Boolean.parseBoolean(swConversor.getText().toString());
-
-                if (isChecked){
-
-                    gFahren.setText(gCel.toString()+"F");
-
-                } else {
-                gFahren.setText("");
-                }
-
-
-            }
-        });
-
-            }
+        inicializarComponentes();
+        botaoConversor();
     }
+
+        private void inicializarComponentes(){
+            gCelsius = (EditText)findViewById(R.id.etCelsius);
+            gFahren = (EditText)findViewById(R.id.etFahrenheit);
+            swConversor = (Switch)findViewById(R.id.swConversor);
+        }
+
+        private void botaoConversor(){
+
+                swConversor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            Double gCel; // <-- Isso aqui deveria resolver, mas não resolve
+                            Double res = 0.0;
+
+                        gCel = Double.parseDouble(gCelsius.getText().toString());
+
+
+
+
+                        if (isChecked) {
+                            Toast.makeText(MainActivity.this, "Valor da et: " +gCel, Toast.LENGTH_LONG).show();
+                            res = (gCel * 9 / 5) + 32;
+                            gFahren.setText(res.toString() + " ºF");
+
+                        } else {
+                            gFahren.setText("");
+                        }
+                    }
+                });
+        }
+
 }
+
