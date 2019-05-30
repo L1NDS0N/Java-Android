@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         inicializarComponentes();
         botaoConversor();
+
+
     }
 
         private void inicializarComponentes(){
@@ -35,25 +37,55 @@ public class MainActivity extends AppCompatActivity {
                 swConversor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                            Double gCel; // <-- Isso aqui deveria resolver, mas não resolve
-                            Double res = 0.0;
+                            Double gCel;
 
+                        if (gCelsius.getText().toString().trim().isEmpty() == false){
                         gCel = Double.parseDouble(gCelsius.getText().toString());
 
-
-
-
                         if (isChecked) {
-                            Toast.makeText(MainActivity.this, "Valor da et: " +gCel, Toast.LENGTH_LONG).show();
-                            res = (gCel * 9 / 5) + 32;
-                            gFahren.setText(res.toString() + " ºF");
-
+//                            t.start();
+                            gCel = (gCel * 9 / 5) + 32;
+                            gFahren.setText(gCel.toString() + " ºF");
                         } else {
                             gFahren.setText("");
+                        }
                         }
                     }
                 });
         }
+
+//        public Thread autoRefresh(){
+//
+//    Thread t = new Thread(){
+//
+//        @Override
+//        public void run(){
+//
+//            while(!isInterrupted()){
+//
+//                try {
+//                    Thread.sleep(1000);  //1000ms = 1 sec
+//
+//                    runOnUiThread(new Runnable() {
+//
+//                        @Override
+//                        public void run() {
+////                            count++;
+////                            textView.setText(String.valueOf(count));
+//                        }
+//                    });
+//
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        }
+//    };
+//    return t;
+//    }
+
+
 
 }
 
