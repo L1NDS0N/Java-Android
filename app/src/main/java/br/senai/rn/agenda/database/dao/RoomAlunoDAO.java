@@ -21,6 +21,6 @@ public interface RoomAlunoDAO {
     @Delete
     void remove(Aluno aluno);
 
-    @Query("SELECT * FROM Aluno")
+    @Query("SELECT * FROM alunos")
     List<Aluno> todos();
 }
