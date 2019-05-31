@@ -56,6 +56,13 @@ public class Aluno implements Serializable {
         return nome;
     }
 
+    public String getNomeCompleto(){
+        return new StringBuilder()
+                .append(nome).append(" ")
+                .append(sobrenome).toString();
+    }
+
+
     public String getTelefone() {
         return telefone;
     }
