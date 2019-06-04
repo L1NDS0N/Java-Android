@@ -7,10 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import br.com.alura.agenda.R;
+
 import br.senai.rn.agenda.database.AgendaDatabase;
 import br.senai.rn.agenda.database.dao.AlunoDAO;
 import br.senai.rn.agenda.model.Aluno;
+import br.senai.rn.agenda.R;
 
 import static br.senai.rn.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 

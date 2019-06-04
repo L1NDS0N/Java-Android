@@ -10,7 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
-import br.com.alura.agenda.R;
+
+
+import br.senai.rn.agenda.R;
 import br.senai.rn.agenda.model.Aluno;
 import br.senai.rn.agenda.ui.ListaAlunosView;
 

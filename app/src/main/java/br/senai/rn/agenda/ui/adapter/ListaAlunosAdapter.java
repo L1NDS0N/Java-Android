@@ -7,10 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.alura.agenda.R;
+import br.senai.rn.agenda.R;
 import br.senai.rn.agenda.model.Aluno;
 
 public class ListaAlunosAdapter extends BaseAdapter {
