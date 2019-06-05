@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">catalogo</string>
+    <string name="email">E-mail</string>
+    <string name="fabricante">Fabricante</string>
+    <string name="preco">Preço</string>
+    <string name="nome">Nome</string>
 </resources>
