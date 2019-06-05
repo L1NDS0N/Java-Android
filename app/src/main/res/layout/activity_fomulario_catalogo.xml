@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/activity_formulario_aluno_nome"
+            android:id="@+id/activity_formulario_produto_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -21,7 +21,7 @@
             />
 
         <EditText
-            android:id="@+id/activity_formulario_aluno_telefone"
+            android:id="@+id/activity_formulario_produto_preco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -31,7 +31,7 @@
             />
 
         <EditText
-            android:id="@+id/activity_formulario_aluno_email"
+            android:id="@+id/activity_formulario_produto_fabricante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
